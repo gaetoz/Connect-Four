@@ -61,18 +61,24 @@ public class GameLoop {
         String choice = OX.discSelection();
 
         while(choice.equals("O")) {
-            test.placingODisc(grid);
             grid.displayMap();
-
+            test.placingODisc(grid);
+            if (gameOver(grid)) {
+                System.exit(0);
+            }
+            test.computerPlacingXDisc(grid);
             if (gameOver(grid)) {
                 System.exit(0);
             }
         }
 
         while (choice.equals("X")) {
-            test.placingXDisc(grid);
             grid.displayMap();
-
+            test.placingXDisc(grid);
+            if(gameOver(grid)){
+                System.exit(0);
+            }
+            test.computerPlacingODisc(grid);
             if(gameOver(grid)){
                 System.exit(0);
             }

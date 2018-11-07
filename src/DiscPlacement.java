@@ -31,7 +31,6 @@ public class DiscPlacement {
                 break;
             }
         }
-        computerPlacingXDisc(grid);
     }
 
     public void placingXDisc(Map grid) {
@@ -48,7 +47,6 @@ public class DiscPlacement {
                 break;
             }
         }
-        computerPlacingODisc(grid);
     }
 
 
