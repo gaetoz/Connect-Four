@@ -1,13 +1,13 @@
 public class Map {
     Tile[][] map;
-    int rows;
-    int columns;
+    final int rows = 6;
+    final int columns = 7;
 
 
-    public Map(int x, int y) {
-        this.rows = x;
-        this.columns = y;
-        this.map = new Tile[x][y];
+    public Map() {
+        //this.rows = 6;
+        //this.columns = 7;
+        this.map = new Tile[rows][columns];
 
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < columns; j++){

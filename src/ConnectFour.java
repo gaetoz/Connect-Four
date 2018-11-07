@@ -3,7 +3,7 @@
 
 public class ConnectFour {
     public static void main(String args[]){
-        Map grid = new Map(6,7);
+        Map grid = new Map();
         GameLoop gameLoop = new GameLoop();
 
         grid.displayMap();

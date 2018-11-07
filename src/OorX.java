@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class OorX {
     public String discSelection() {
         Scanner input = new Scanner(System.in);
-        //System.out.println("Choose disc type/letter O/X (capital letter) ");
         String discChoice;
 
         do {
