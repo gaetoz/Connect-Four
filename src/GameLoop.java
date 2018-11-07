@@ -57,28 +57,60 @@ public class GameLoop {
     public void gameOn(Map grid){
         DiscPlacement test = new DiscPlacement();
         OorX OX = new OorX();
+        FirstTurn XO = new FirstTurn();
 
         String choice = OX.discSelection();
+        String first = XO.first();
 
-        while(choice.equals("O")) {
-            grid.displayMap();
+
+        //added while loop condition setting which player starts first.
+        while(choice.equals("O") && first.equals("O")) {
             test.placingODisc(grid);
+            grid.displayMap();
             if (gameOver(grid)) {
                 System.exit(0);
             }
             test.computerPlacingXDisc(grid);
+            grid.displayMap();
             if (gameOver(grid)) {
                 System.exit(0);
             }
         }
 
-        while (choice.equals("X")) {
-            grid.displayMap();
+        while (choice.equals("X") && first.equals("X")) {
             test.placingXDisc(grid);
+            grid.displayMap();
             if(gameOver(grid)){
                 System.exit(0);
             }
             test.computerPlacingODisc(grid);
+            grid.displayMap();
+            if(gameOver(grid)){
+                System.exit(0);
+            }
+        }
+
+        while(choice.equals("O") && first.equals("X")) {
+            test.computerPlacingXDisc(grid);
+            grid.displayMap();
+            if (gameOver(grid)) {
+                System.exit(0);
+            }
+            test.placingODisc(grid);
+            grid.displayMap();
+            if (gameOver(grid)) {
+                System.exit(0);
+            }
+        }
+
+        while (choice.equals("X") && first.equals("O")) {
+            test.computerPlacingODisc(grid);
+            grid.displayMap();
+            if(gameOver(grid)){
+                System.exit(0);
+            }
+            test.placingXDisc(grid);
+            grid.displayMap();
             if(gameOver(grid)){
                 System.exit(0);
             }
