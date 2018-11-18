@@ -7,4 +7,8 @@ public class EmptyTile extends Tile {
     public String toString() {
         return " ";
     }
+
+    public String toString2(){
+        return "EmptyTile";
+    }
 }

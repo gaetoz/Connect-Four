@@ -6,4 +6,7 @@ public class ODisc extends Tile {
     public String toString(){
         return "O";
     }
+    public String toString2(){
+        return "ODisc";
+    }
 }

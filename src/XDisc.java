@@ -6,4 +6,8 @@ public class XDisc extends Tile {
     public String toString(){
         return "X";
     }
+
+    public String toString2(){
+        return "XDisc";
+    }
 }
